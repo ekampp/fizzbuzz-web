@@ -1,0 +1,13 @@
+{{#if session.isAuthenticated}}
+  <a {{action 'invalidateSession'}}>Logout</a>
+{{else}}
+  {{#link-to 'login'}}Login{{/link-to}}
+{{/if}}
+
+<h1>FizzBuzz Favorites</h1>
+
+<ul>
+  {{#each model as |number|}}
+    <li>{{number.value}}</li>
+  {{/each}}
+</ul>

@@ -1,0 +1,10 @@
+<h1>FizzBuzz Favorites</h1>
+
+<ul>
+  {{#each model as |number|}}
+    <li>
+      {{number.value}}
+      {{favorite-button number=number.id favorite=number.favorite}}
+    </li>
+  {{/each}}
+</ul>
